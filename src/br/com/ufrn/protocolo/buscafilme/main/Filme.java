@@ -10,22 +10,8 @@ public class Filme {
 	private String principaisAtores;
 	private String sinopse;
 	private String poster;
-	private float notaIMDB;
-
-	
-	public Filme(String titulo, String ano, String genero, String diretor, String autor, String principaisAtores,
-			float notaIMDB, String sinopse, String poster) {
-		super();
-		this.titulo = titulo;
-		this.ano = ano;
-		this.genero = genero;
-		this.diretor = diretor;
-		this.autor = autor;
-		this.principaisAtores = principaisAtores;
-		this.notaIMDB = notaIMDB;
-		this.sinopse = sinopse;
-		this.poster = poster;
-	}
+	private String imdbID;
+	private float notaIMDB; 
 
 
 	public Filme() {
@@ -121,6 +107,37 @@ public class Filme {
 	public void setPoster(String poster) {
 		this.poster = poster;
 	}
+
 	
+	public String getImdbID() {
+		return imdbID;
+	}
+
+
+	public void setImdbID(String imdbID) {
+		this.imdbID = imdbID;
+	}
+
+
+	public void imprimeFilme() {
+		System.out.println("Título: " + this.getTitulo());
+		System.out.println("Ano: " + this.getAno());
+		System.out.println("Poster: " + this.getPoster());
+		System.out.println("imdbID: " + this.getImdbID());
+		System.out.println("**************************************************");
+		//System.out.println("Autor: " + filme.getAutor());
+	}
+	
+	public void imprimeDetalhesFilme() {
+		System.out.println("Título: " + this.getTitulo());
+		System.out.println("Ano: " + this.getAno());
+		System.out.println("Gênero: " + this.getGenero());
+		//System.out.println("Autor: " + filme.getAutor());
+		System.out.println("Atores principais: " + this.getPrincipaisAtores());
+		System.out.println("Nota no imdb: " + this.getNotaIMDB());
+		System.out.println("Sinopse: " + this.getSinopse());
+		System.out.println("Poster: " + this.getPoster());
+		System.out.println("**************************************************");
+	}
 	
 }
